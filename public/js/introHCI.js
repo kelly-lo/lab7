@@ -10,4 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$(".likeBtn").click(sendAnalytics);
+}
+
+function sendAnalytics(e) {
+	e.preventDefault();
+
+	ga("send", "event", "like", "click");
 }
